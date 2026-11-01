@@ -23,10 +23,6 @@ var game_state: GameState
 
 
 
-
-
-
-
 func set_game_state(_game_state: GameState) -> void:
 
 	if game_state == _game_state:

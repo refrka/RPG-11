@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dl4cvi6mgew48"]
 
 [ext_resource type="PackedScene" uid="uid://bv7lxdsqt8eme" path="res://main/ui/main_menu.tscn" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://bg8qxv3jgqj52" path="res://root.gd" id="1_pyidc"]
 
 [node name="Root" type="Node" unique_id=1987040066]
+script = ExtResource("1_pyidc")
 
 [node name="BGCanvas" type="CanvasLayer" parent="." unique_id=1444335202]
 

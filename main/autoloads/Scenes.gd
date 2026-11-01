@@ -61,7 +61,7 @@ func _set_current_scene(current_scene: Node) -> void:
 
 	if current_scene:
 
-		_close_scene(_current_scene)
+		_close_scene(current_scene)
 
 	_current_scene = current_scene
 
