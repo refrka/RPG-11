@@ -20,6 +20,37 @@ var game_state: GameState
 
 
 
+## Load the current save or start a new one and change game_state to GameState.GAME_ACTIVE
+func start() -> void:
+
+	pass
+
+
+## Exit the game and return to the main menu
+func exit() -> void:
+
+	pass
+
+
+## Close the game application
+func quit() -> void:
+
+	get_tree().quit()
+
+
+## Reset the save data
+func reset() -> void:
+
+	pass
+
+
+## Pause/unpause the game.
+func set_pause_state(_state: bool) -> void:
+
+	pass
+
+
+
 
 
 
