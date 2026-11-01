@@ -51,6 +51,12 @@ func set_pause_state(_state: bool) -> void:
 
 
 
+func save() -> void:
+
+	Data.save()
+
+
+
 
 
 

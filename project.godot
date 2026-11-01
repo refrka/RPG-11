@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Game="*uid://c3vij8eqan41d"
 Scenes="*uid://bydgrtfufbowh"
+Data="*uid://13qnbhjalbke"
 
 [display]
 
