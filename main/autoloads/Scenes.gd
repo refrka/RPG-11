@@ -38,6 +38,7 @@ func load_scene(scene_script: Script) -> Node:
 
 
 
+
 func get_scene(scene_script: Script) -> Node:
 
 	if _scene_registry.has(scene_script):
@@ -45,6 +46,10 @@ func get_scene(scene_script: Script) -> Node:
 		return _scene_registry[scene_script]
 
 	return null
+
+
+
+
 
 
 

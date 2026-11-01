@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://d2l75786rmb2j"]
+[gd_scene format=3 uid="uid://dghltjcsb2u4k"]
 
-[node name="Character" type="CharacterBody2D" unique_id=1953955639]
+[ext_resource type="Script" uid="uid://c1imfb1dijtfk" path="res://main/entity.gd" id="1_5n7is"]
+
+[node name="Entity" type="CharacterBody2D" unique_id=1953955639]
+script = ExtResource("1_5n7is")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=338197001]
 

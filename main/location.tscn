@@ -2,12 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bch3aywyfd6fe" path="res://main/location.gd" id="1_wqyeb"]
 
-[node name="Location" type="Node2D" unique_id=647515337 groups=["scene"]]
+[node name="Location" type="Node2D" unique_id=647515337 node_paths=PackedStringArray("entities_root") groups=["scene"]]
 script = ExtResource("1_wqyeb")
+entities_root = NodePath("EntitiesRoot")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1105935242]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1179525941]
+[node name="GroundTileMap" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1179525941]
+
+[node name="SceneTileMap" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1899924248]
 
 [node name="EntitiesRoot" type="Node2D" parent="." unique_id=1676900795]
 y_sort_enabled = true

@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bv7lxdsqt8eme" path="res://main/ui/main_menu.tscn" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://bg8qxv3jgqj52" path="res://root.gd" id="1_pyidc"]
-[ext_resource type="PackedScene" uid="uid://cb1m5210n34v" path="res://main/location.tscn" id="2_vvh5c"]
+[ext_resource type="Script" uid="uid://borv16m0eme7q" path="res://main/world.gd" id="3_jnlp7"]
+[ext_resource type="PackedScene" uid="uid://dm6evso3ym8f3" path="res://main/locations/location_1/location_1a.tscn" id="4_jnlp7"]
 [ext_resource type="PackedScene" uid="uid://cj5ekwd1glefl" path="res://main/ui/game_menu.tscn" id="5_jnlp7"]
 
 [node name="Root" type="Node" unique_id=1987040066]
@@ -44,8 +45,9 @@ layout_mode = 1
 [node name="WorldCanvas" type="CanvasLayer" parent="." unique_id=997612796]
 
 [node name="World" type="Node2D" parent="WorldCanvas" unique_id=569646966]
+script = ExtResource("3_jnlp7")
 
-[node name="Location" parent="WorldCanvas/World" unique_id=647515337 instance=ExtResource("2_vvh5c")]
+[node name="Location1a" parent="WorldCanvas/World" unique_id=647515337 instance=ExtResource("4_jnlp7")]
 
 [node name="HUDCanvas" type="CanvasLayer" parent="." unique_id=1174086162]
 
