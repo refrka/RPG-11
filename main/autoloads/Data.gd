@@ -10,7 +10,7 @@ var _current_save_data: SaveData
 
 
 
-
+## Create new SaveData and set to current
 func create_save_data() -> void:
 
 	var save_data = SaveData.new()
@@ -20,7 +20,7 @@ func create_save_data() -> void:
 
 
 
-
+## Load a SaveData with the dict and set to current
 func load_save_data(save_dict: Dictionary) -> SaveData:
 
 	var save_data = SaveData.from_dict(save_dict)
@@ -31,7 +31,7 @@ func load_save_data(save_dict: Dictionary) -> SaveData:
 
 
 
-
+## Write the SaveData dict to file
 func save() -> void:
 
 	if not _current_save_data:
@@ -41,6 +41,29 @@ func save() -> void:
 	var save_dict = _current_save_data.to_dict()
 
 	_write_dict_to_file(save_dict, SAVE_PATH)
+
+
+
+func set_game_data_value(property_name: String, value: Variant) -> void:
+
+	if not _current_save_data or not _current_save_data.game_data.has(property_name):
+
+		return
+
+	_current_save_data.game_data.set(property_name, value)	
+
+
+
+
+func get_game_data_value(property_name: String) -> Variant:
+
+	if not _current_save_data:
+
+		return null
+
+	return _current_save_data.game_data.get(property_name, null)
+
+
 
 
 
