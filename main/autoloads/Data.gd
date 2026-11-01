@@ -10,10 +10,24 @@ var _current_save_data: SaveData
 
 
 
+
+
+
+
+
+func _ready() -> void:
+
+	_load_current_save_file()
+
+
+
+
 ## Create new SaveData and set to current
 func create_save_data() -> void:
 
 	var save_data = SaveData.new()
+
+	_write_dict_to_file(save_data.to_dict(), SAVE_PATH)
 
 	_set_current_save_data(save_data)
 
@@ -69,6 +83,23 @@ func get_game_data_value(property_name: String) -> Variant:
 
 
 
+
+func _load_current_save_file() -> void:
+
+	if not FileAccess.file_exists(SAVE_PATH):
+
+		create_save_data()
+
+	else:
+
+		_read_dict_from_file(SAVE_PATH)
+
+
+
+
+
+
+
 func _set_current_save_data(save_data: SaveData) -> void:
 
 	_current_save_data = save_data
@@ -85,7 +116,6 @@ func _write_dict_to_file(dict: Dictionary, path: String) -> void:
 	file.store_string(JSON.stringify(dict, " "))
 
 	file.close()
-
 
 
 
