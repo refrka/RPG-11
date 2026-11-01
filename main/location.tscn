@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cb1m5210n34v"]
+
+[ext_resource type="Script" uid="uid://bch3aywyfd6fe" path="res://main/location.gd" id="1_wqyeb"]
+
+[node name="Location" type="Node2D" unique_id=647515337]
+script = ExtResource("1_wqyeb")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1105935242]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1179525941]
+
+[node name="EntitiesRoot" type="Node2D" parent="." unique_id=1676900795]
+y_sort_enabled = true

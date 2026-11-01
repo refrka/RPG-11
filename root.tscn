@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bv7lxdsqt8eme" path="res://main/ui/main_menu.tscn" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://bg8qxv3jgqj52" path="res://root.gd" id="1_pyidc"]
+[ext_resource type="PackedScene" uid="uid://cb1m5210n34v" path="res://main/location.tscn" id="2_vvh5c"]
 
 [node name="Root" type="Node" unique_id=1987040066]
 script = ExtResource("1_pyidc")
@@ -29,7 +30,7 @@ color = Color(0.05, 0.05, 0.05, 1)
 
 [node name="World" type="Node2D" parent="WorldCanvas" unique_id=569646966]
 
-[node name="Location" type="Node2D" parent="WorldCanvas/World" unique_id=1712169838]
+[node name="Location" parent="WorldCanvas/World" unique_id=647515337 instance=ExtResource("2_vvh5c")]
 
 [node name="HUDCanvas" type="CanvasLayer" parent="." unique_id=1174086162]
 
