@@ -26,6 +26,8 @@ func _ready() -> void:
 
 func load_scene(scene_script: Script) -> Node:
 
+	print("loading ", scene_script)
+
 	var scene = get_scene(scene_script)
 
 	if is_instance_valid(scene) and scene.is_inside_tree():
@@ -59,9 +61,13 @@ func _register_scene(scene: Node) -> void:
 
 func _set_current_scene(current_scene: Node) -> void:
 
-	if current_scene:
+	if _current_scene != null:
 
-		_close_scene(current_scene)
+		if current_scene == _current_scene:
+
+			return
+			
+		_close_scene(_current_scene)
 
 	_current_scene = current_scene
 
@@ -89,7 +95,7 @@ func _open_scene(scene: Node) -> void:
 
 func _close_scene(scene: Node) -> void:
 
-	if scene.has_method("_open"):
+	if scene.has_method("_close"):
 
 		scene._close()
 

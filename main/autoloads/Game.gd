@@ -6,6 +6,8 @@ signal game_state_changed(new_state: GameState)
 
 enum GameState {
 
+	INIT,
+
 	MAIN_MENU,
 
 	GAME_ACTIVE,
@@ -23,7 +25,7 @@ var game_state: GameState
 ## Load the current save or start a new one and change game_state to GameState.GAME_ACTIVE
 func start() -> void:
 
-	pass
+	set_game_state(GameState.GAME_ACTIVE)
 
 
 ## Exit the game and return to the main menu

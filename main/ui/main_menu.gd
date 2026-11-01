@@ -23,6 +23,50 @@ func _ready() -> void:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+func _open() -> void:
+
+	pass
+
+
+
+func _close() -> void:
+
+	print("main menu close")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 func _on_start_pressed() -> void:
 
 	Game.start()
