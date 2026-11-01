@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dl4cvi6mgew48"]
+
+[node name="Root" type="Node" unique_id=1987040066]
+
+[node name="BGCanvas" type="CanvasLayer" parent="." unique_id=1444335202]
+
+[node name="BGRoot" type="Control" parent="BGCanvas" unique_id=1026939072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGRect" type="ColorRect" parent="BGCanvas/BGRoot" unique_id=160317573]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.05, 1)
+
+[node name="WorldCanvas" type="CanvasLayer" parent="." unique_id=997612796]
+
+[node name="World" type="Node2D" parent="WorldCanvas" unique_id=569646966]
+
+[node name="Location" type="Node2D" parent="WorldCanvas/World" unique_id=1712169838]
+
+[node name="HUDCanvas" type="CanvasLayer" parent="." unique_id=1174086162]
+
+[node name="HUDRoot" type="Control" parent="HUDCanvas" unique_id=1813766572]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenuCanvas" type="CanvasLayer" parent="." unique_id=371336529]
+
+[node name="MainMenuRoot" type="Control" parent="MainMenuCanvas" unique_id=1047276119]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenu" type="MarginContainer" parent="MainMenuCanvas/MainMenuRoot" unique_id=981841841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu" unique_id=1697594407]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer" unique_id=1510420490]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer" unique_id=1430355256]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=440716173]
+custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
+text = "START"
+
+[node name="ResetButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=356361157]
+custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
+text = "RESET"
+
+[node name="QuitButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=1342101775]
+custom_minimum_size = Vector2(80, 24)
+layout_mode = 2
+text = "QUIT"
