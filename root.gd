@@ -3,8 +3,6 @@ extends Node
 
 
 
-
-
 func _ready() -> void:
 
 	Game.game_state_changed.connect(_on_game_state_changed)

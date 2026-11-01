@@ -17,6 +17,8 @@ var _current_save_data: SaveData
 
 func _ready() -> void:
 
+	process_mode = PROCESS_MODE_ALWAYS
+
 	_load_current_save_file()
 
 

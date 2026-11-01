@@ -13,6 +13,8 @@ var _scene_registry: Dictionary[Script, Node]
 
 func _ready() -> void:
 
+	process_mode = PROCESS_MODE_ALWAYS
+
 	get_tree().node_added.connect(_on_node_added_to_tree)
 
 	var scenes = get_tree().get_nodes_in_group("scene")
@@ -25,8 +27,6 @@ func _ready() -> void:
 
 
 func load_scene(scene_script: Script) -> Node:
-
-	print("loading ", scene_script)
 
 	var scene = get_scene(scene_script)
 
@@ -53,6 +53,8 @@ func get_scene(scene_script: Script) -> Node:
 func _register_scene(scene: Node) -> void:
 
 	_scene_registry[scene.get_script()] = scene
+
+	scene.hide()
 
 
 

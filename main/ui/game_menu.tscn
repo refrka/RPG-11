@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cj5ekwd1glefl"]
+
+[ext_resource type="Script" uid="uid://cflsbom3b23fs" path="res://main/ui/game_menu.gd" id="1_k8cyd"]
+
+[node name="GameMenu" type="MarginContainer" unique_id=543880626 node_paths=PackedStringArray("resume_button", "exit_button", "quit_button") groups=["scene"]]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k8cyd")
+resume_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/ResumeButton")
+exit_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/ExitButton")
+quit_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/QuitButton")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1403597922]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"GameMenuPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1114801561]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=433396206]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=302932115]
+custom_minimum_size = Vector2(65, 25)
+layout_mode = 2
+text = "Resume"
+
+[node name="ExitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1039213529]
+custom_minimum_size = Vector2(65, 25)
+layout_mode = 2
+text = "Exit"
+
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2053651215]
+custom_minimum_size = Vector2(65, 25)
+layout_mode = 2
+text = "Quit"

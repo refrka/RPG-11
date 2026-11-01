@@ -44,8 +44,17 @@ func _open() -> void:
 
 func _close() -> void:
 
-	print("main menu close")
+	pass
 
+
+
+
+
+func _unhandled_input(event: InputEvent) -> void:
+
+	if event.is_action_pressed("back"):
+
+		print("MainMenu back")
 
 
 

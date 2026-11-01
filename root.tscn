@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bv7lxdsqt8eme" path="res://main/ui/main_menu.tscn" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://bg8qxv3jgqj52" path="res://root.gd" id="1_pyidc"]
 [ext_resource type="PackedScene" uid="uid://cb1m5210n34v" path="res://main/location.tscn" id="2_vvh5c"]
+[ext_resource type="PackedScene" uid="uid://cj5ekwd1glefl" path="res://main/ui/game_menu.tscn" id="5_jnlp7"]
 
 [node name="Root" type="Node" unique_id=1987040066]
 script = ExtResource("1_pyidc")
@@ -26,6 +27,20 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.05, 0.05, 0.05, 1)
 
+[node name="MainMenuCanvas" type="CanvasLayer" parent="." unique_id=371336529]
+
+[node name="MainMenuRoot" type="Control" parent="MainMenuCanvas" unique_id=1047276119]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenu" parent="MainMenuCanvas/MainMenuRoot" unique_id=412125572 instance=ExtResource("1_pq8q7")]
+layout_mode = 1
+
 [node name="WorldCanvas" type="CanvasLayer" parent="." unique_id=997612796]
 
 [node name="World" type="Node2D" parent="WorldCanvas" unique_id=569646966]
@@ -43,9 +58,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MainMenuCanvas" type="CanvasLayer" parent="." unique_id=371336529]
+[node name="WindowCanvas" type="CanvasLayer" parent="." unique_id=1079593132]
 
-[node name="MainMenuRoot" type="Control" parent="MainMenuCanvas" unique_id=1047276119]
+[node name="WindowRoot" type="Control" parent="WindowCanvas" unique_id=453452901]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,5 +69,16 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MainMenu" parent="MainMenuCanvas/MainMenuRoot" unique_id=412125572 instance=ExtResource("1_pq8q7")]
+[node name="GameMenuCanvas" type="CanvasLayer" parent="." unique_id=1447798566]
+
+[node name="GameMenuRoot" type="Control" parent="GameMenuCanvas" unique_id=2048168994]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GameMenu" parent="GameMenuCanvas/GameMenuRoot" unique_id=543880626 instance=ExtResource("5_jnlp7")]
 layout_mode = 1

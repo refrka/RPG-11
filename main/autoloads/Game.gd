@@ -21,6 +21,13 @@ var game_state: GameState
 
 
 
+func _ready() -> void:
+
+	process_mode = PROCESS_MODE_ALWAYS
+
+
+
+
 
 ## Load the current save or start a new one and change game_state to GameState.GAME_ACTIVE
 func start() -> void:
@@ -47,9 +54,9 @@ func reset() -> void:
 
 
 ## Pause/unpause the game.
-func set_pause_state(_state: bool) -> void:
+func set_pause_state(state: bool) -> void:
 
-	pass
+	get_tree().paused = state
 
 
 
