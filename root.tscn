@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dl4cvi6mgew48"]
 
+[ext_resource type="PackedScene" uid="uid://bv7lxdsqt8eme" path="res://main/ui/main_menu.tscn" id="1_pq8q7"]
+
 [node name="Root" type="Node" unique_id=1987040066]
 
 [node name="BGCanvas" type="CanvasLayer" parent="." unique_id=1444335202]
@@ -49,41 +51,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MainMenu" type="MarginContainer" parent="MainMenuCanvas/MainMenuRoot" unique_id=981841841]
+[node name="MainMenu" parent="MainMenuCanvas/MainMenuRoot" unique_id=412125572 instance=ExtResource("1_pq8q7")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu" unique_id=1697594407]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer" unique_id=1510420490]
-layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer" unique_id=1430355256]
-layout_mode = 2
-
-[node name="StartButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=440716173]
-custom_minimum_size = Vector2(80, 24)
-layout_mode = 2
-text = "START"
-
-[node name="ResetButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=356361157]
-custom_minimum_size = Vector2(80, 24)
-layout_mode = 2
-text = "RESET"
-
-[node name="QuitButton" type="Button" parent="MainMenuCanvas/MainMenuRoot/MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=1342101775]
-custom_minimum_size = Vector2(80, 24)
-layout_mode = 2
-text = "QUIT"

@@ -6,6 +6,53 @@ signal current_scene_changed(new_scene: Node)
 
 var _current_scene: Node
 
+var _scene_registry: Dictionary[Script, Node]
+
+
+
+
+func _ready() -> void:
+
+	get_tree().node_added.connect(_on_node_added_to_tree)
+
+	var scenes = get_tree().get_nodes_in_group("scene")
+
+	for scene in scenes:
+
+		_register_scene(scene)
+
+
+
+
+func load_scene(scene_script: Script) -> Node:
+
+	var scene = get_scene(scene_script)
+
+	if is_instance_valid(scene) and scene.is_inside_tree():
+
+		_set_current_scene(scene)
+
+	return scene
+
+
+
+func get_scene(scene_script: Script) -> Node:
+
+	if _scene_registry.has(scene_script):
+
+		return _scene_registry[scene_script]
+
+	return null
+
+
+
+
+
+func _register_scene(scene: Node) -> void:
+
+	_scene_registry[scene.get_script()] = scene
+
+
 
 
 
@@ -44,3 +91,19 @@ func _close_scene(scene: Node) -> void:
 
 		scene._close()
 
+
+
+
+
+
+
+
+
+
+
+
+func _on_node_added_to_tree(node: Node) -> void:
+
+	if node.is_in_group("scene"):
+
+		_register_scene(node)
