@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgd6b7rlwnjln" path="res://main/ui/main_menu.gd" id="1_yrm2s"]
 
-[node name="MainMenu" type="MarginContainer" unique_id=412125572 groups=["scene"]]
+[node name="MainMenu" type="MarginContainer" unique_id=412125572 node_paths=PackedStringArray("start_button", "reset_button", "quit_button") groups=["scene"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -10,11 +10,15 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_yrm2s")
+start_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/StartButton")
+reset_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/ResetButton")
+quit_button = NodePath("PanelContainer/MarginContainer/VBoxContainer/QuitButton")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1460315867]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_type_variation = &"MainMenuPanel"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=690169768]
 layout_mode = 2
@@ -29,14 +33,17 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1522937938]
 custom_minimum_size = Vector2(100, 24)
 layout_mode = 2
+theme_type_variation = &"MainMenuButton"
 text = "START"
 
 [node name="ResetButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=102807993]
 custom_minimum_size = Vector2(100, 24)
 layout_mode = 2
+theme_type_variation = &"MainMenuButton"
 text = "RESET"
 
 [node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1243765746]
 custom_minimum_size = Vector2(100, 24)
 layout_mode = 2
+theme_type_variation = &"MainMenuButton"
 text = "QUIT"

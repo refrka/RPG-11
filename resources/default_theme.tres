@@ -2,6 +2,38 @@
 
 [ext_resource type="FontFile" uid="uid://bdsvnnfimuiq5" path="res://resources/ReplaceTheSun.ttf" id="1_mwhd1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pkyf"]
+content_margin_top = 1.0
+bg_color = Color(0.16555026, 0.16555026, 0.16555026, 1)
+border_width_bottom = 1
+border_color = Color(0.49315637, 0.49315643, 0.49315614, 1)
+shadow_color = Color(0, 0, 0, 0.16470589)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nva1m"]
+bg_color = Color(0.11, 0.11, 0.11, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og51b"]
+content_margin_top = 1.0
+bg_color = Color(0.21748495, 0.21748513, 0.21748504, 1)
+border_width_bottom = 1
+border_color = Color(0.49315637, 0.49315643, 0.49315614, 1)
+shadow_color = Color(0, 0, 0, 0.16470589)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwhd1"]
+bg_color = Color(0.08, 0.08, 0.08, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.11305209, 0.11305208, 0.11305206, 1)
+
 [resource]
 default_font = ExtResource("1_mwhd1")
 default_font_size = 8
+MainMenuButton/base_type = &"Button"
+MainMenuButton/styles/hover = SubResource("StyleBoxFlat_2pkyf")
+MainMenuButton/styles/normal = SubResource("StyleBoxFlat_nva1m")
+MainMenuButton/styles/pressed = SubResource("StyleBoxFlat_og51b")
+MainMenuPanel/base_type = &"PanelContainer"
+MainMenuPanel/styles/panel = SubResource("StyleBoxFlat_mwhd1")
