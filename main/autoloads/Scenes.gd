@@ -83,6 +83,8 @@ func _open_scene(scene: Node) -> void:
 
 		scene._open()
 
+		scene.show()
+
 
 
 func _close_scene(scene: Node) -> void:
@@ -90,6 +92,8 @@ func _close_scene(scene: Node) -> void:
 	if scene.has_method("_open"):
 
 		scene._close()
+
+		scene.hide()
 
 
 

@@ -24,3 +24,7 @@ func _on_game_state_changed(game_state: Game.GameState) -> void:
 		Game.GameState.MAIN_MENU:
 
 			Scenes.load_scene(MainMenu)
+
+		Game.GameState.GAME_ACTIVE:
+
+			Scenes.load_scene(Location)
