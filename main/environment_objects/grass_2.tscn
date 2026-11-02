@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://rahwyuthxmjn"]
+
+[ext_resource type="PackedScene" uid="uid://dyke3o3pkd0jc" path="res://main/environment_object.tscn" id="1_sc3lk"]
+[ext_resource type="Texture2D" uid="uid://bwlhj0evjkw0j" path="res://resources/textures/environment_objects/grass_2_texture.png" id="2_udpxb"]
+
+[sub_resource type="Animation" id="Animation_sc3lk"]
+resource_name = "wave"
+length = 2.1666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 1.0666667, 1.6666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.12217304763960307, 0.0, -0.12217304763960307]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_udpxb"]
+_data = {
+&"wave": SubResource("Animation_sc3lk")
+}
+
+[node name="Grass2" unique_id=558892110 instance=ExtResource("1_sc3lk")]
+texture = ExtResource("2_udpxb")
+offset = Vector2(0, -11)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1741901827]
+libraries/ = SubResource("AnimationLibrary_udpxb")
+autoplay = &"wave"

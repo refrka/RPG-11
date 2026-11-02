@@ -1,5 +1,19 @@
-[gd_scene format=3 uid="uid://dm6evso3ym8f3"]
+[gd_scene format=4 uid="uid://dm6evso3ym8f3"]
 
 [ext_resource type="PackedScene" uid="uid://cb1m5210n34v" path="res://main/location.tscn" id="1_rj7dt"]
+[ext_resource type="PackedScene" uid="uid://cif6wofa17nol" path="res://main/environment_objects/grass_1.tscn" id="2_4wo4w"]
+[ext_resource type="PackedScene" uid="uid://rahwyuthxmjn" path="res://main/environment_objects/grass_2.tscn" id="3_c2u1y"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_c2u1y"]
+resource_name = "Environment Objects"
+scenes/1/scene = ExtResource("2_4wo4w")
+scenes/2/scene = ExtResource("3_c2u1y")
+
+[sub_resource type="TileSet" id="TileSet_ef055"]
+sources/0 = SubResource("TileSetScenesCollectionSource_c2u1y")
 
 [node name="Location1a" unique_id=647515337 instance=ExtResource("1_rj7dt")]
+
+[node name="SceneTileMap" parent="NavigationRegion2D" parent_id_path=PackedInt32Array(1105935242) index="1" unique_id=1899924248]
+tile_map_data = PackedByteArray("AAAHAAcAAAAAAAAAAQAIAAgAAAAAAAAAAgAIAAcAAAAAAAAAAQAHAAkAAAAAAAAAAgAHAAgAAAAAAAAAAgAJAAgAAAAAAAAAAgAJAAcAAAAAAAAAAgAGAAcAAAAAAAAAAgAGAAgAAAAAAAAAAQAFAAkAAAAAAAAAAQAFAAgAAAAAAAAAAQA=")
+tile_set = SubResource("TileSet_ef055")

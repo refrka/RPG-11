@@ -1,0 +1,1 @@
+class_name EnvironmentObject extends Sprite2D

@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bch3aywyfd6fe" path="res://main/location.gd" id="1_wqyeb"]
 
-[node name="Location" type="Node2D" unique_id=647515337 node_paths=PackedStringArray("entities_root") groups=["scene"]]
+[node name="Location" type="Node2D" unique_id=647515337 node_paths=PackedStringArray("ground_tile_map", "scene_tile_map", "entities_root") groups=["scene"]]
 script = ExtResource("1_wqyeb")
+ground_tile_map = NodePath("NavigationRegion2D/SceneTileMap")
+scene_tile_map = NodePath("NavigationRegion2D/SceneTileMap")
 entities_root = NodePath("EntitiesRoot")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1105935242]
