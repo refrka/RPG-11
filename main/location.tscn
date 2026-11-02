@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bch3aywyfd6fe" path="res://main/location.gd" id="1_wqyeb"]
 
-[node name="Location" type="Node2D" unique_id=647515337 node_paths=PackedStringArray("ground_tile_map", "scene_tile_map", "entities_root") groups=["scene"]]
+[node name="Location" type="Node2D" unique_id=647515337 node_paths=PackedStringArray("ground_tile_map", "scene_tile_map", "entities_root", "environment_root") groups=["scene"]]
 script = ExtResource("1_wqyeb")
 ground_tile_map = NodePath("NavigationRegion2D/SceneTileMap")
 scene_tile_map = NodePath("NavigationRegion2D/SceneTileMap")
-entities_root = NodePath("EntitiesRoot")
+entities_root = NodePath("YSortRoot/EntitiesRoot")
+environment_root = NodePath("YSortRoot/EnvironmentRoot")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1105935242]
 
@@ -14,5 +15,11 @@ entities_root = NodePath("EntitiesRoot")
 
 [node name="SceneTileMap" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1899924248]
 
-[node name="EntitiesRoot" type="Node2D" parent="." unique_id=1676900795]
+[node name="YSortRoot" type="Node2D" parent="." unique_id=420777225]
+y_sort_enabled = true
+
+[node name="EntitiesRoot" type="Node2D" parent="YSortRoot" unique_id=1676900795]
+y_sort_enabled = true
+
+[node name="EnvironmentRoot" type="Node2D" parent="YSortRoot" unique_id=1798075811]
 y_sort_enabled = true

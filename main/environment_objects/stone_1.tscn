@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://enl3si1kv7lq"]
+
+[ext_resource type="PackedScene" uid="uid://dyke3o3pkd0jc" path="res://main/environment_object.tscn" id="1_olhhr"]
+[ext_resource type="Texture2D" uid="uid://do0nohg17qfbg" path="res://resources/textures/environment_objects/stone_1_texturepng.png" id="2_f5fos"]
+[ext_resource type="Script" uid="uid://b5n5f2jo0318f" path="res://main/components/interactable_component.gd" id="3_f5fos"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k1fg7"]
+radius = 5.0990195
+
+[node name="Stone1" unique_id=1888734400 instance=ExtResource("1_olhhr")]
+collision_layer = 5
+collision_mask = 0
+
+[node name="Sprite2D" parent="." index="0" unique_id=995275581]
+texture = ExtResource("2_f5fos")
+offset = Vector2(0, -5)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=752915347]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_k1fg7")
+
+[node name="InteractableComponent" type="Node" parent="." index="2" unique_id=1785320447]
+script = ExtResource("3_f5fos")

@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://c1imfb1dijtfk" path="res://main/entity.gd" id="1_5n7is"]
 
 [node name="Entity" type="CharacterBody2D" unique_id=1953955639]
+collision_mask = 0
+motion_mode = 1
 script = ExtResource("1_5n7is")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=338197001]
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup" unique_id=948206676]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=948206676]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=979940013]

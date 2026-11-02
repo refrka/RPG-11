@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dyke3o3pkd0jc"]
 
-[ext_resource type="Script" uid="uid://dpj5o0fy5filw" path="res://main/environment_object.gd" id="1_uq83f"]
+[ext_resource type="Script" uid="uid://c1imfb1dijtfk" path="res://main/entity.gd" id="1_uq83f"]
 
-[node name="EnvironmentObject" type="Sprite2D" unique_id=558892110]
+[node name="EnvironmentObject" type="StaticBody2D" unique_id=1888734400]
 script = ExtResource("1_uq83f")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1129586099]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=995275581]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1935872324]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=752915347]

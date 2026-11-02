@@ -36,6 +36,11 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.11305209, 0.11305208, 0.11305206, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnlp7"]
+bg_color = Color(0.09215108, 0.09215107, 0.09215107, 1)
+border_width_right = 1
+border_color = Color(0.19748792, 0.19748789, 0.19748789, 1)
+
 [resource]
 default_font = ExtResource("1_mwhd1")
 default_font_size = 8
@@ -47,3 +52,5 @@ MainMenuButton/styles/normal = SubResource("StyleBoxFlat_nva1m")
 MainMenuButton/styles/pressed = SubResource("StyleBoxFlat_og51b")
 MainMenuPanel/base_type = &"PanelContainer"
 MainMenuPanel/styles/panel = SubResource("StyleBoxFlat_mwhd1")
+ProfileOverlayPanel/base_type = &"PanelContainer"
+ProfileOverlayPanel/styles/panel = SubResource("StyleBoxFlat_jnlp7")

@@ -60,9 +60,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="WindowCanvas" type="CanvasLayer" parent="." unique_id=1079593132]
+[node name="OverlayCanvas" type="CanvasLayer" parent="." unique_id=1079593132]
 
-[node name="WindowRoot" type="Control" parent="WindowCanvas" unique_id=453452901]
+[node name="OverlayRoot" type="Control" parent="OverlayCanvas" unique_id=453452901]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,6 +70,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="ProfileOverlay" type="MarginContainer" parent="OverlayCanvas/OverlayRoot" unique_id=1812651762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="OverlayCanvas/OverlayRoot/ProfileOverlay" unique_id=1486629222]
+layout_mode = 2
+color = Color(0, 0, 0, 0.34117648)
+
+[node name="PanelContainer" type="PanelContainer" parent="OverlayCanvas/OverlayRoot/ProfileOverlay" unique_id=687942292]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"ProfileOverlayPanel"
 
 [node name="GameMenuCanvas" type="CanvasLayer" parent="." unique_id=1447798566]
 

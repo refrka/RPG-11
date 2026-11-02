@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="InputConfig" format=3 uid="uid://dr4smn3pvxfi5"]
+
+[ext_resource type="Script" uid="uid://cih60cscjs4e3" path="res://main/config/input_config.gd" id="1_c7bv6"]
+
+[resource]
+script = ExtResource("1_c7bv6")
+metadata/_custom_type_script = "uid://cih60cscjs4e3"

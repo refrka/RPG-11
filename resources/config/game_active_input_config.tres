@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InputConfig" format=3 uid="uid://b8rc336mytehl"]
+
+[ext_resource type="Script" uid="uid://cih60cscjs4e3" path="res://main/config/input_config.gd" id="1_u41f5"]
+
+[resource]
+script = ExtResource("1_u41f5")
+allowed_actions = Array[StringName]([&"back", &"move_left", &"move_right", &"move_up", &"move_down", &"interact", &"attack", &"profile", &"close_window"])
+metadata/_custom_type_script = "uid://cih60cscjs4e3"
