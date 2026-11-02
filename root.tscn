@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://borv16m0eme7q" path="res://main/world.gd" id="3_jnlp7"]
 [ext_resource type="PackedScene" uid="uid://dm6evso3ym8f3" path="res://main/locations/location_1/location_1a.tscn" id="4_jnlp7"]
 [ext_resource type="PackedScene" uid="uid://cj5ekwd1glefl" path="res://main/ui/game_menu.tscn" id="5_jnlp7"]
+[ext_resource type="Script" uid="uid://dmuf1mmjv0dtt" path="res://main/ui/overlays/profile_overlay.gd" id="5_l8v81"]
 
 [node name="Root" type="Node" unique_id=1987040066]
 script = ExtResource("1_pyidc")
@@ -72,6 +73,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="ProfileOverlay" type="MarginContainer" parent="OverlayCanvas/OverlayRoot" unique_id=1812651762]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,6 +81,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("5_l8v81")
 
 [node name="ColorRect" type="ColorRect" parent="OverlayCanvas/OverlayRoot/ProfileOverlay" unique_id=1486629222]
 layout_mode = 2

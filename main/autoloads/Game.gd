@@ -18,7 +18,7 @@ enum GameState {
 
 var game_state: GameState
 
-
+var pause_source_count:= 0
 
 
 func _ready() -> void:
@@ -57,6 +57,32 @@ func reset() -> void:
 func set_pause_state(state: bool) -> void:
 
 	get_tree().paused = state
+
+
+
+func add_pause_source() -> void:
+
+	pause_source_count += 1
+
+	if not get_tree().paused:
+
+		set_pause_state(true)
+
+
+
+func remove_pause_source() -> void:
+
+	if pause_source_count > 0:
+
+		pause_source_count -= 1
+
+	if pause_source_count == 0:
+
+		if get_tree().paused:
+
+			set_pause_state(false)
+
+
 
 
 

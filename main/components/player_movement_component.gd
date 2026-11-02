@@ -20,6 +20,10 @@ var _move_up_pressed:= false
 var _move_down_pressed:= false
 
 
+
+
+
+
 func _set_face_dir(dir: Vector2) -> void:
 
 	face_dir = dir
@@ -78,6 +82,10 @@ func _physics_process(delta: float) -> void:
 	if input_dir != Vector2.ZERO:
 
 		_set_face_dir(input_dir)
+
+	if Input.get_vector("move_left", "move_right", "move_up", "move_down") == Vector2.ZERO:
+
+		input_dir = Vector2.ZERO
 
 	var velocity = input_dir * (100.0)
 

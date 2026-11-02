@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_u41f5")
-allowed_actions = Array[StringName]([&"back", &"move_left", &"move_right", &"move_up", &"move_down", &"interact", &"attack", &"profile", &"close_window"])
+allowed_actions = Array[StringName]([&"back", &"move_left", &"move_right", &"move_up", &"move_down", &"interact", &"attack", &"profile"])
 metadata/_custom_type_script = "uid://cih60cscjs4e3"
